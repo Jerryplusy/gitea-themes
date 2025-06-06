@@ -68,8 +68,8 @@ body::before {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url(../img/bg/2.jpg) no-repeat fixed center center;
-    filter: blur(12px);
+    background: url(https://core.crystelf.top/public/files/image/crystelf/jy.webp) no-repeat fixed center center;
+    filter: blur(6px);
     transform: scale(1.05);
 }
 
