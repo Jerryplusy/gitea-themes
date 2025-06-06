@@ -68,10 +68,11 @@ body::before {
     right: 0;
     bottom: 0;
     z-index: -1;
+    background-size: contain;
     background: url(https://core.crystelf.top/public/files/image/crystelf/jy.webp) no-repeat fixed center center;
     filter: blur(6px);
-    transform: scale(1.05);
 }
+
 
 a.item,
 a.item:hover,
