@@ -53,11 +53,11 @@
 }
 
 body {
-    background: url(https://nd.liteyuki.icu/api/v3/file/get/29680/furina.png?sign=KGLcdLoRTKtMXwc7wUoUC4csi5wKUEX-cbh4XoOGSk0%3D%3A0);
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-repeat: repeat-y !important;
-    background-position: center center !important;
+    position: relative;
+    background: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -65,11 +65,12 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    pointer-events: none;
+    right: 0;
+    bottom: 0;
     z-index: -1;
+    background: url(../img/bg/2.jpg) no-repeat fixed center center;
+    filter: blur(12px);
+    transform: scale(1.05);
 }
 
 a.item,
@@ -88,14 +89,6 @@ footer {
     display: flex;
     flex-direction: column !important;
     z-index: 1;
-
-    backdrop-filter: var(--backdrop-filter) !important;
-    background-color: var(--menu-background-color) !important;
-    padding: 0.5rem !important;
-
-    .left-links {
-        margin-bottom: 0.5rem !important;
-    }
 }
 
 #navbar {
@@ -553,7 +546,7 @@ table{
 }
 
 .flex-item:hover{
-    box-shadow: #dfe7ff57 3px 3px 5px 0px;
+    box-shadow: #dfe7ff57 3px 3px 5px 0;
 }
 
 .label-list .ui.label {

@@ -24,11 +24,11 @@
 
 /* 添加全局背景图 */
 body {
-    background: url(../img/bg/1.jpg) !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    background-repeat: repeat-y !important;
-    background-position: center center !important;
+    position: relative;
+    background: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -36,13 +36,12 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
-    pointer-events: none;
-    /* 确保蒙版不会影响页面上的其他元素的交互 */
-    /* 确保蒙版在背景图之下 */
+    right: 0;
+    bottom: 0;
     z-index: -1;
+    background: url(../img/bg/1.jpg) no-repeat fixed center center;
+    filter: blur(12px);
+    transform: scale(1.05);
 }
 
 #navbar {
@@ -69,10 +68,7 @@ body::before {
     background: var(--ui-background-color);
     backdrop-filter: blur(15px);
     padding: 1rem;
-    border-top-left-radius: var(--ltyk-border-radius) !important;
-    border-top-right-radius: var(--ltyk-border-radius) !important;
-    border-bottom-left-radius: var(--ltyk-border-radius) !important;
-    border-bottom-right-radius: var(--ltyk-border-radius) !important;
+    border-radius: var(--ltyk-border-radius);
 }
 
 /* 一些下拉菜单有问题请在此处添加排除 */
@@ -155,17 +151,11 @@ body::before {
 }
 
 .secondary-nav .ui.container:nth-of-type(1) {
-    border-top-left-radius: var(--ltyk-border-radius) !important;
-    border-top-right-radius: var(--ltyk-border-radius) !important;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
+    border-radius: var(--ltyk-border-radius) var(--ltyk-border-radius) 0 0;
 }
 
 .ui.container:has(+.ui.tabs.divider) {
-    border-bottom-left-radius: var(--ltyk-border-radius) !important;
-    border-bottom-right-radius: var(--ltyk-border-radius) !important;
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
+    border-radius: 0 0 var(--ltyk-border-radius) var(--ltyk-border-radius);
 }
 
 .page-content .container:last-of-type {
